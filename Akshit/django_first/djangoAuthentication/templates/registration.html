@@ -2,7 +2,7 @@
 <head>
     <title>Welcome Register Page</title>
 </head>
-<body>
+<body bgcolor='cyan'>
 <center>
 <form action="/registration" method="POST">
     {%csrf_token%}
@@ -16,6 +16,11 @@
     <button type="submit">Registration</button></br>
     <a href="/login">Back to Login</a>
 </form>
+    <div style='color:red'>
+    {% for message in messages%}
+    <h2>{{message}}</h2>
+    {% endfor %}
+    </div>
 </center>
 </body>
 </html>
